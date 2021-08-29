@@ -10,7 +10,7 @@ Harmadik lépésben kiszámolom az összeget.*/
 function calcAmount() {
    let price = 1000;
    let amountInput = document.querySelector("input[name='amount-input']");
-   let showAmount = document.querySelector("span.show-amount");
+   
    /*alert("Fizetendő: " + amount + "Ft.");*/
    let amountNumber = parseInt(amountInput.value)
    /*ha nem írok be számot, törlöm a nullát is, akkor NaN felirat lesz a 
@@ -25,8 +25,11 @@ function calcAmount() {
    alatt már az van:
    */
    amountNumber = isNaN(amountNumber) ? 0 : amountNumber;
+
+   showSumPrice(price, amountNumber);
 }
-function showSumPrice(pricePerProduct, amountNumber) {
+function showSumPrice(price, amountNumber) {
+   let showAmount = document.querySelector("span.show-amount");
    if (amountNumber > 10) {
       alert("Maximum 10 db. terméket vásárolhat!");
       return;
