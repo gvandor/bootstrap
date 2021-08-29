@@ -1,6 +1,6 @@
 /*console.log("hello");
 alert("Hello js!");*/
-/*console.log("Hello this is a console message");*/
+//console.log("Hello this is a console message");//
 /*var name = 'Amy'
 alert(name);*/
 /* Létrehozom az alapárat tartalmazó változót, 
@@ -24,7 +24,9 @@ function calcAmount() {
    leckében az if feltétel egyszerűsítése címszónál, tehát a komment
    alatt már az van:
    */
-   amountNumber = isNaN(amountNumber) ? 0: amountNumber;
+   amountNumber = isNaN(amountNumber) ? 0 : amountNumber;
+}
+function showSumPrice(pricePerProduct, amountNumber) {
    if (amountNumber > 10) {
       alert("Maximum 10 db. terméket vásárolhat!");
       return;
